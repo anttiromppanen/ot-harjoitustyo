@@ -1,0 +1,122 @@
+commit c3e170aef3bc904931d928bd6302d5496f2468d0
+Author: Antti Romppanen <romppanen.antti@gmail.com>
+Date:   Mon Mar 22 04:42:52 2021 +0200
+
+    poista tiedosto file1 ja uudelleennimeä tiedosto file2 tiedostoksi file22
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 0f01997632b447aeb02e99a44b2793f3a3923098
+Author: Antti Romppanen <romppanen.antti@gmail.com>
+Date:   Mon Mar 22 04:33:11 2021 +0200
+
+    luo repositiosi sisälle hakemisto tiedostoja ja hakemiston sisälle tiedostot file1, file2 ja file3
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit dbaf6e1286c286fa5c632b0de390446c0284af3d
+Author: Antti Romppanen <romppanen.antti@gmail.com>
+Date:   Mon Mar 22 04:25:32 2021 +0200
+
+    Tee muutoksia tiedostoon kolmas.txt ja lisää se committoitavaksi. Älä kuitenkaan committoi.
+
+ kolmas.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 98d16a456062592800837b3ac8e801cf813b497f
+Author: Antti Romppanen <romppanen.antti@gmail.com>
+Date:   Mon Mar 22 04:23:29 2021 +0200
+
+    Tee jotain muutoksia tiedostoihin eka.txt ja kolmas.txt
+
+ eka.txt    | 8 +-------
+ kolmas.txt | 3 ++-
+ 2 files changed, 3 insertions(+), 8 deletions(-)
+
+commit 98250ed460c543468d145d6d368da11e5b2a71b4
+Author: Antti Romppanen <romppanen.antti@gmail.com>
+Date:   Mon Mar 22 04:20:11 2021 +0200
+
+    muuta tiedoston tiedosto.txt nimeksi eka.txt
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit caddf55457bf1505a7451a34f30dc8b0a35c5e0b
+Author: Antti Romppanen <romppanen.antti@gmail.com>
+Date:   Mon Mar 22 04:19:05 2021 +0200
+
+    Poista tiedosto toinen.txt
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit e0ae65d85c1318ea9bd9d75ad4c6c12f42dbe0d4
+Author: Antti Romppanen <romppanen.antti@gmail.com>
+Date:   Mon Mar 22 04:16:13 2021 +0200
+
+    Poista nyt osa tiedoston tekstistä ja lisää tiedostoon hieman lisää tekstiä
+
+ tiedosto.txt | 62 ++++--------------------------------------------------------
+ 1 file changed, 4 insertions(+), 58 deletions(-)
+
+commit 6b8f8fef9f845617ed510fe7223f6f402b801e9f
+Author: Antti Romppanen <romppanen.antti@gmail.com>
+Date:   Mon Mar 22 04:14:57 2021 +0200
+
+    paljon tekstia
+
+ tiedosto.txt | 200 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 199 insertions(+), 1 deletion(-)
+
+commit 2966610fb6af3b46f71a000572445272dedc56bb
+Author: Antti Romppanen <romppanen.antti@gmail.com>
+Date:   Mon Mar 22 04:02:59 2021 +0200
+
+    Luo hakemisto stuff ja sen sisälle jokin tiedosto
+
+ stuff/jokin_tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 714948a89f9383ea27a69a875050e5a0c2822804
+Author: Antti Romppanen <romppanen.antti@gmail.com>
+Date:   Mon Mar 22 04:01:34 2021 +0200
+
+    Muuta tiedostojen toinen.txt ja kolmas.txt sisältöä ja commitoi muutokset
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 66cb37f172a0fae017dc55a8710d4ce4d9313d1a
+Author: Antti Romppanen <romppanen.antti@gmail.com>
+Date:   Mon Mar 22 04:00:28 2021 +0200
+
+    add kolmas
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 658ab97ebc2108382675d6ccf7d1b7d95ed5666e
+Author: Antti Romppanen <romppanen.antti@gmail.com>
+Date:   Mon Mar 22 03:58:18 2021 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit f35c4f2aa985a15500b2877a94845674fd615bd2
+Author: Antti Romppanen <romppanen.antti@gmail.com>
+Date:   Mon Mar 22 03:55:20 2021 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
