@@ -1,14 +1,15 @@
 # Zero salt rounds
+---
 Sovellus on yksinkertainen salasanojen hallinnointipalvelu. Uusi käyttäjä voi luoda käyttäjätunnuksen, jonka jälkeen kirjautuneena käyttäjä voi lisätä sekä poistaa haluamiansa tunnuksia eri palveluihin.
 
 Sovellus on testattu Python-versioilla 3.8.2 sekä 3.6.9. Sovelluksen tulisi toimia kaikilla Python-versioilla 3.6.0 lähtien.
----
 ### Dokumentaatio
 ---
 [vaatimusmäärittely](https://github.com/anttiromppanen/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)<br />
 [tuntikirjanpito](https://github.com/anttiromppanen/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
 
 ### Asennus
+---
 Ohje olettaa, että käyttäjällä on poetry valmiiksi asennettuna.
 
 #### Riippuvuuksien asennus
