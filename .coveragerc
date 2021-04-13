@@ -1,0 +1,3 @@
+[run]
+source = src
+omit = src/tests/**,src/ui/**,src/index.py,C:\Users\Ana\AppData\Local\pypoetry\Cache\virtualenvs\ot-harjoitustyo-UaV6YSTs-py3.8\Lib\site-packages/**
