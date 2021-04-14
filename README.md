@@ -18,6 +18,12 @@ Ohje olettaa, että käyttäjällä on poetry valmiiksi asennettuna.
 #### Ohjelman ajaminen
 `poetry run invoke start` tai `poetry run invoke start-windows`
 
+`käyttäjänimi: root`
+
+`salasana: root`
+
+Ensimmäisessä versiossa järjestelmään ei voi viedä luoda käyttäjiä, joten kyseinen käyttäjä luodaan ajamisen yhteydessä.
+
 #### Testien ajaminen
 `poetry run invoke test`
 
