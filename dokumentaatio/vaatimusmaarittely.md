@@ -16,19 +16,24 @@ Sovellus koostuu neljästä eri näkymästä. Sovellus aukeaa kirjautumisnäkym�
 - Käyttäjä voi kirjautua sovellukseen
   - käyttäjä syöttää käyttäjätunnuksen sekä salasanan lomakkeeseen
   - käyttäjätunnuksen sekä salasanan täsmätessä käyttäjä kirjataan sovellukseen sisään
-  - kirjautuminen epäonnistuu jos käyttäjätunnus sekä salasana eivät täsmää, käyttäjälle ilmoitetaan virheestä
+  - kirjautuminen epäonnistuu jos käyttäjätunnus sekä salasana eivät täsmää
+  - järjestelmään voi luoda uuden käyttäjän	
+  - uuden käyttäjän lisäyssivulta pääsee kirjautumisnäkymään cancel-napilla
 #### Kirjautumisen jälkeen
-- Käyttäjä näkee etusivulla sovellukseen lisäämänsä salasanat
-- Käyttäjä voi kirjautua ulos sovelluksesta logout napilla
-- Käyttäjä voi lisätä sovellukseen uusia salasanoja
+
+  - käyttäjä siirtyy näkymään jossa näytetään käyttäjän lisäämät salasanat
   - käyttäjä siirtyy uuden lisäyksen mahdollistamaan näkymään
-  - käyttäjä täyttää lomakkeeseen sivuston, käyttäjätunnuksen sekä salasanan
-    - kentät eivät voi olla tyhjiä
-  - käyttäjä pääsee cancel napilla takaisin päänäkymään
 
 ## Jatkokehitysideoita
 
-- Järjestelmään voi luoda uuden käyttäjän
+- Taulu salasanoille tietokantaan
+- Käyttäjä voi lisätä sovellukseen uusia salasanoja
+- Käyttäjä näkee etusivulla sovellukseen lisäämänsä salasanat
+- Käyttäjä voi kirjautua ulos sovelluksesta logout napilla
+- Käyttäjä pääsee uuden salasanan lisäyssivulle
+- Käyttäjän lisäämien salasanojen näyttäminen
+- Salasanojen lisäys sovelluksen kautta
+- Virheiden ilmoitus käyttäjälle sovelluksen kautta
 - Salasanojen poisto sovelluksesta
 - Käyttäjätunnusten hashaus
 - Lisättyjen salasanojen listaus eri kriteerien mukaan
