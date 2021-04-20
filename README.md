@@ -23,7 +23,7 @@ Ohje olettaa, että käyttäjällä on poetry valmiiksi asennettuna.
 
 `salasana: root`
 
-Ensimmäisessä versiossa järjestelmään ei voi viedä luoda käyttäjiä, joten kyseinen käyttäjä luodaan ajamisen yhteydessä.
+Huomaa, että (väliaikaiseksi) sovellusta avattaessa tietokanta tyhjennetään sekä alustetaan kyseisellä käyttäjällä.
 
 #### Testien ajaminen
 `poetry run invoke test`
@@ -32,3 +32,8 @@ Ensimmäisessä versiossa järjestelmään ei voi viedä luoda käyttäjiä, jot
 `poetry run invoke coverage-report`
 
 Komento muodostaa kansion "htmlcov", jonka sisältä löytyy tiedosto "index.html". Avaamalla tiedoston selaimella näät ohjelman kattavuusraportin.
+
+#### Lint
+`poetry run invoke lint`
+
+Tarkastaa src-kansion pylintin avulla.
