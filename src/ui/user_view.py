@@ -1,4 +1,4 @@
-from tkinter import Tk, ttk, constants
+from tkinter import ttk, constants
 
 class UserView:
     def __init__(self, root):

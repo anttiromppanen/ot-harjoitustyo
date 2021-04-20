@@ -1,6 +1,5 @@
 from tkinter import Tk, ttk, constants
 from db_connection import database_connection
-from repositories.user_repository import UserRepository
 from services.user_service import UserService
 from entities.user import User
 
@@ -65,14 +64,29 @@ class RegisterView:
             command=lambda: self._handle_cancel()
         )
 
-        heading_label.grid(row=0, column=0, columnspan=2, sticky=constants.W, padx=5, pady=5)
-        username_label.grid(row=1, column=0)
-        username_entry.grid(row=1, column=1, sticky=(
-            constants.E, constants.W), padx=2, pady=2, ipady=5)
-        password_label.grid(row=2, column=0)
-        password_entry.grid(row=2, column=1, sticky=(
-            constants.E, constants.W), padx=2, pady=2, ipady=5)
-        register_button.grid(row=3, column=0, sticky=constants.E,
-            padx=2, pady=5, ipady=5)
-        cancel_button.grid(row=3, column=1, sticky=constants.W,
-            padx=2, pady=5, ipady=5)
+        heading_label.grid(
+            row=0, column=0, columnspan=2,
+            sticky=constants.W, padx=5, pady=5
+        )
+        username_label.grid(
+            row=1, column=0
+        )
+        username_entry.grid(
+            row=1, column=1, sticky=(constants.E, constants.W),
+            padx=2, pady=2, ipady=5
+        )
+        password_label.grid(
+            row=2, column=0
+        )
+        password_entry.grid(
+            row=2, column=1, sticky=(constants.E, constants.W),
+            padx=2, pady=2, ipady=5
+        )
+        register_button.grid(
+            row=3, column=0, sticky=constants.E,
+            padx=2, pady=5, ipady=5
+        )
+        cancel_button.grid(
+            row=3, column=1, sticky=constants.W,
+            padx=2, pady=5, ipady=5
+        )

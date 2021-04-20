@@ -1,4 +1,3 @@
-from db_connection import database_connection
 from entities.user import User
 
 
@@ -17,7 +16,9 @@ class UserRepository:
     def login_user(self, user):
         cursor = self._conn.cursor()
         cursor.execute(
-            'SELECT * FROM users WHERE username = ? AND password = ?', (user.username, user.password))
+            'SELECT * FROM users WHERE username = ? AND password = ?',
+            (user.username, user.password)
+        )
         user = cursor.fetchone()
 
         return self.tuple_to_user(user)
@@ -48,7 +49,7 @@ class UserRepository:
         cursor.execute('SELECT * FROM users WHERE username = (?)', (username,))
         result = cursor.fetchone()
 
-        return result
+        return self.tuple_to_user(result)
 
     def delete_all(self):
         cursor = self._conn.cursor()

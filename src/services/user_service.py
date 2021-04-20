@@ -1,5 +1,4 @@
 from db_connection import database_connection
-from entities.user import User
 from repositories.user_repository import (
     UserRepository as default_user_repository
 )
@@ -23,9 +22,11 @@ class UserService:
 
     def create_user(self, user):
         # username must be unique
-        # returns None if username already exists
+        # returns None if username already exists or empty fields
         # otherwise adds new user and returns it
         if self.get_user(user):
+            return None
+        if not user.username or not user.password:
             return None
 
         new_user = self._user_repository.create_user(user)

@@ -1,4 +1,3 @@
-from tkinter import Tk
 from ui.login_view import LoginView
 from ui.user_view import UserView
 from ui.register_view import RegisterView

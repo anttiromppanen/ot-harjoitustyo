@@ -1,6 +1,5 @@
 from tkinter import Tk, ttk, constants
 from db_connection import database_connection
-from repositories.user_repository import UserRepository
 from ui.user_view import UserView
 from entities.user import User
 from services.user_service import UserService
@@ -22,8 +21,6 @@ class LoginView:
         self._frame.destroy()
 
     def _handle_login(self, username, password):
-        #user_repository = UserRepository(database_connection())
-        #self._user = user_repository.login_user(User(username, password))
         self._user = self._user_service.login_user(User(username, password))
 
         # if valid username and password, move into user view
