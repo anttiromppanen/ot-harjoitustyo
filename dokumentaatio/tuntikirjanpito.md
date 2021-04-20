@@ -11,4 +11,6 @@
 | 10.4  | 5    | työn aloitus |
 | 11.4  | 3    | alustava ui valmiiksi |
 | 12.4  | 4    | ui:n ja tietokannan liittäminen |
-| 13.4  | 4    | ensimmäiset testit, testikattavuusraportti, koodin siistintää
+| 13.4  | 4    | ensimmäiset testit, testikattavuusraportti, koodin siistintää |
+| 19.4  | 2    | register view luotu sekä liitetty login viewiin
+| 20.4  | 1    | login view:n register button sekä register view:n cancel button toimii |

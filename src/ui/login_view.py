@@ -6,12 +6,13 @@ from entities.user import User
 
 
 class LoginView:
-    def __init__(self, root, handle_user_view):
+    def __init__(self, root, handle_user_view, handle_register_view):
         self._root = root
         self._frame = None
         self._initialize()
         self._user = None
         self._handle_user_view = handle_user_view
+        self._handle_register_view = handle_register_view
 
     def pack(self):
         self._frame.pack(fill=constants.X)
@@ -28,31 +29,42 @@ class LoginView:
         if self._user:
             self._handle_user_view()
 
+    def _handle_register_button(self):
+        self._handle_register_view()
+
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
+
         heading_label = ttk.Label(
-            master=self._frame, text="Welcome, please log in or register", font=(None, 20))
+            master=self._frame, text="Welcome, please log in or register", font=(None, 20)
+        )
         username_label = ttk.Label(
-            master=self._frame, text="username", font=(None, 10))
-        username_entry = ttk.Entry(master=self._frame)
+            master=self._frame, text="username", font=(None, 10)
+        )
+        username_entry = ttk.Entry(
+            master=self._frame
+        )
         password_label = ttk.Label(
-            master=self._frame, text="password", font=(None, 10))
-        password_entry = ttk.Entry(master=self._frame, show="*")
+            master=self._frame, text="password", font=(None, 10)
+        )
+        password_entry = ttk.Entry(
+            master=self._frame, show="*"
+        )
         login_button = ttk.Button(
             master=self._frame,
             text="Login",
             command=lambda: self._handle_login(
-                username_entry.get(), password_entry.get())
+                username_entry.get(), password_entry.get()
+            )
         )
-        register_button = ttk.Button(master=self._frame, text="Register")
-
-        # grey out register button until working
-        style_ref = ttk.Style()
-        style_ref.configure("style_name.TLabel", foreground='grey')
-        register_button['style'] = "style_name.TLabel"
+        register_button = ttk.Button(
+            master=self._frame,
+            text="Register",
+            command=lambda: self._handle_register_button()
+        )
 
         heading_label.grid(row=0, column=0, columnspan=2,
-                           sticky=constants.W, padx=5, pady=5)
+            sticky=constants.W, padx=5, pady=5)
         username_label.grid(row=1, column=0)
         username_entry.grid(row=1, column=1, sticky=(
             constants.E, constants.W), padx=2, pady=2, ipady=5)
@@ -60,7 +72,7 @@ class LoginView:
         password_entry.grid(row=2, column=1, sticky=(
             constants.E, constants.W), padx=2, pady=2, ipady=5)
         login_button.grid(row=3, column=0, sticky=constants.E,
-                          padx=2, pady=5, ipady=5)
+            padx=2, pady=5, ipady=5)
         register_button.grid(
             row=3, column=1, sticky=constants.W, padx=2, pady=5, ipady=5)
 
