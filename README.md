@@ -6,7 +6,8 @@ Sovellus on testattu Python-versioilla 3.8.2 sekä 3.6.9. Sovelluksen tulisi toi
 ### Dokumentaatio
 ---
 [vaatimusmäärittely](https://github.com/anttiromppanen/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)<br />
-[tuntikirjanpito](https://github.com/anttiromppanen/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
+[tuntikirjanpito](https://github.com/anttiromppanen/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)<br />
+[pakkauskaavio](https://github.com/anttiromppanen/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
 
 ### Asennus
 ---
