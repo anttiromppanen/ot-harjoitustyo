@@ -13,16 +13,16 @@ Sovellus koostuu neljästä eri näkymästä. Sovellus aukeaa kirjautumisnäkym�
 ## Perusversion tarjoama toiminnallisuus
 
 #### Ennen kirjautumista
-- Käyttäjä voi kirjautua sovellukseen
-  - käyttäjä syöttää käyttäjätunnuksen sekä salasanan lomakkeeseen
-  - käyttäjätunnuksen sekä salasanan täsmätessä käyttäjä kirjataan sovellukseen sisään
-  - kirjautuminen epäonnistuu jos käyttäjätunnus sekä salasana eivät täsmää
-  - järjestelmään voi luoda uuden käyttäjän	
-  - uuden käyttäjän lisäyssivulta pääsee kirjautumisnäkymään cancel-napilla
+- :heavy_check_mark: Käyttäjä voi kirjautua sovellukseen
+  - :heavy_check_mark: käyttäjä syöttää käyttäjätunnuksen sekä salasanan lomakkeeseen
+  - :heavy_check_mark: käyttäjätunnuksen sekä salasanan täsmätessä käyttäjä kirjataan sovellukseen sisään
+  - :heavy_check_mark: kirjautuminen epäonnistuu jos käyttäjätunnus sekä salasana eivät täsmää
+  - :heavy_check_mark: järjestelmään voi luoda uuden käyttäjän	
+  - :heavy_check_mark: uuden käyttäjän lisäyssivulta pääsee kirjautumisnäkymään cancel-napilla
 #### Kirjautumisen jälkeen
 
-  - käyttäjä siirtyy näkymään jossa näytetään käyttäjän lisäämät salasanat
-  - käyttäjä siirtyy uuden lisäyksen mahdollistamaan näkymään
+  - :heavy_check_mark: käyttäjä siirtyy näkymään jossa näytetään käyttäjän lisäämät salasanat
+  - :heavy_check_mark: käyttäjä siirtyy uuden lisäyksen mahdollistamaan näkymään
 
 ## Jatkokehitysideoita
 
