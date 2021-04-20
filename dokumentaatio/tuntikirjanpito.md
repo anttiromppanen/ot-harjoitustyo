@@ -15,3 +15,4 @@
 | 19.4  | 2    | register view luotu sekä liitetty login viewiin
 | 20.4  | 1    | login view:n register button sekä register view:n cancel button toimii |
 | 20.4  | 2    | käyttäjän rekisteröiminen toimii, lisätty erillinen luokka logiikalle |
+| 20.4  | 2    | pylint lisätty, dokumentaation päivitystä |
