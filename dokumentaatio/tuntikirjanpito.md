@@ -14,3 +14,4 @@
 | 13.4  | 4    | ensimmäiset testit, testikattavuusraportti, koodin siistintää |
 | 19.4  | 2    | register view luotu sekä liitetty login viewiin
 | 20.4  | 1    | login view:n register button sekä register view:n cancel button toimii |
+| 20.4  | 2    | käyttäjän rekisteröiminen toimii, lisätty erillinen luokka logiikalle |

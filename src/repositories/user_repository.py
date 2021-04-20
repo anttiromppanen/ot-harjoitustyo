@@ -32,11 +32,23 @@ class UserRepository:
 
     def create_user(self, user):
         cursor = self._conn.cursor()
+        username = user.username.lower()
+
         cursor.execute('INSERT INTO users (username, password) values (?, ?)',
-                       (user.username, user.password))
+                       (username, user.password))
+
         self._conn.commit()
 
         return user
+
+    def get_single_user(self, user):
+        cursor = self._conn.cursor()
+        username = user.username.lower()
+
+        cursor.execute('SELECT * FROM users WHERE username = (?)', (username,))
+        result = cursor.fetchone()
+
+        return result
 
     def delete_all(self):
         cursor = self._conn.cursor()

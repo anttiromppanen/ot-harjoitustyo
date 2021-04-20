@@ -1,4 +1,8 @@
 from tkinter import Tk, ttk, constants
+from db_connection import database_connection
+from repositories.user_repository import UserRepository
+from services.user_service import UserService
+from entities.user import User
 
 class RegisterView:
     def __init__(self, root, handle_login_view):
@@ -6,6 +10,7 @@ class RegisterView:
         self._frame = None
         self._initialize()
         self._handle_login_view = handle_login_view
+        self._user_service = UserService()
 
     def pack(self):
         self._frame.pack(fill=constants.X)
@@ -14,7 +19,15 @@ class RegisterView:
         self._frame.destroy()
 
     def _handle_register(self, username, password):
-        pass
+        # if user already exists, return and stay on register view
+        # if user is created, move to login view
+        user = self._user_service.create_user(User(username, password))
+
+        if not user:
+            return
+
+        self._handle_login_view()
+        return user
 
     def _handle_cancel(self):
         self._handle_login_view()
@@ -37,7 +50,7 @@ class RegisterView:
         password_entry = ttk.Entry(
             master=self._frame, show="*"
         )
-        # Add user to database and return to login screen
+        # add user to database and return to login screen
         register_button = ttk.Button(
             master=self._frame,
             text="Register",
@@ -45,7 +58,7 @@ class RegisterView:
                 username_entry.get(), password_entry.get()
             )
         )
-        # Return to login screen
+        # return to login screen
         cancel_button = ttk.Button(
             master=self._frame,
             text="Cancel",

@@ -3,7 +3,7 @@ from db_connection import database_connection
 from repositories.user_repository import UserRepository
 from ui.user_view import UserView
 from entities.user import User
-
+from services.user_service import UserService
 
 class LoginView:
     def __init__(self, root, handle_user_view, handle_register_view):
@@ -11,6 +11,7 @@ class LoginView:
         self._frame = None
         self._initialize()
         self._user = None
+        self._user_service = UserService()
         self._handle_user_view = handle_user_view
         self._handle_register_view = handle_register_view
 
@@ -21,8 +22,9 @@ class LoginView:
         self._frame.destroy()
 
     def _handle_login(self, username, password):
-        user_repository = UserRepository(database_connection())
-        self._user = user_repository.login_user(User(username, password))
+        #user_repository = UserRepository(database_connection())
+        #self._user = user_repository.login_user(User(username, password))
+        self._user = self._user_service.login_user(User(username, password))
 
         # if valid username and password, move into user view
         # else reset password field and print error
