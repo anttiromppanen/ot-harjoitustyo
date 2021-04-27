@@ -9,6 +9,9 @@ Sovellus on testattu Python-versioilla 3.8.2 sekä 3.6.9. Sovelluksen tulisi toi
 [tuntikirjanpito](https://github.com/anttiromppanen/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)<br />
 [arkkitehtuuri](https://github.com/anttiromppanen/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
 
+### Release
+[Viikko5](https://github.com/anttiromppanen/ot-harjoitustyo/releases/tag/viikko5)
+
 ### Asennus
 ---
 Ohje olettaa, että käyttäjällä on poetry valmiiksi asennettuna.
