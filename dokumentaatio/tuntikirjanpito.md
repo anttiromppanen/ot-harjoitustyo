@@ -16,3 +16,4 @@
 | 20.4  | 1    | login view:n register button sekä register view:n cancel button toimii |
 | 20.4  | 2    | käyttäjän rekisteröiminen toimii, lisätty erillinen luokka logiikalle |
 | 20.4  | 2    | pylint lisätty, dokumentaation päivitystä |
+| 27.4  | 2    | lisätty tietokantaan taulukko passwords sekä linkitetty taulukko user viewiin |
