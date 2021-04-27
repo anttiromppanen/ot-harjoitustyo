@@ -28,12 +28,12 @@ class UI:
 
         self._current_view.pack()
 
-    def _handle_user_view(self):
-        self._show_user_view()
+    def _handle_user_view(self, user):
+        self._show_user_view(user)
 
-    def _show_user_view(self):
+    def _show_user_view(self, user):
         self._hide_current_view()
-        self._current_view = UserView(self._root)
+        self._current_view = UserView(self._root, user)
         self._current_view.pack()
 
     def _handle_register_view(self):

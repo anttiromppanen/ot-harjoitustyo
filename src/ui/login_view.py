@@ -9,7 +9,7 @@ class LoginView:
         self._root = root
         self._frame = None
         self._initialize()
-        self._user = None
+        self.user = None
         self._user_service = UserService()
         self._handle_user_view = handle_user_view
         self._handle_register_view = handle_register_view
@@ -21,12 +21,12 @@ class LoginView:
         self._frame.destroy()
 
     def _handle_login(self, username, password):
-        self._user = self._user_service.login_user(User(username, password))
+        self.user = self._user_service.login_user(User(username, password))
 
         # if valid username and password, move into user view
         # else reset password field and print error
-        if self._user:
-            self._handle_user_view()
+        if self.user:
+            self._handle_user_view(self.user)
 
     def _handle_register_button(self):
         self._handle_register_view()

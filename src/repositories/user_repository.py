@@ -10,6 +10,7 @@ class UserRepository:
             return None
 
         user_to_return = User(user[1], user[2])
+        user_to_return.set_user_id(user[0])
 
         return user_to_return
 
@@ -19,9 +20,11 @@ class UserRepository:
             'SELECT * FROM users WHERE username = ? AND password = ?',
             (user.username, user.password)
         )
-        user = cursor.fetchone()
 
-        return self.tuple_to_user(user)
+        user = cursor.fetchone()
+        user_to_return = self.tuple_to_user(user)
+
+        return user_to_return
 
     def get_all_users(self):
         cursor = self._conn.cursor()

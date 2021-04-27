@@ -1,9 +1,10 @@
 from tkinter import ttk, constants
 
 class UserView:
-    def __init__(self, root):
+    def __init__(self, root, user):
         self._root = root
         self._frame = None
+        self.user = user
         self._initialize()
 
     def pack(self):
