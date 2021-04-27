@@ -19,6 +19,7 @@ Sovellus koostuu neljästä eri näkymästä. Sovellus aukeaa kirjautumisnäkym�
   - :heavy_check_mark: kirjautuminen epäonnistuu jos käyttäjätunnus sekä salasana eivät täsmää
   - :heavy_check_mark: järjestelmään voi luoda uuden käyttäjän	
   - :heavy_check_mark: uuden käyttäjän lisäyssivulta pääsee kirjautumisnäkymään cancel-napilla
+
 #### Kirjautumisen jälkeen
 
   - :heavy_check_mark: käyttäjä siirtyy näkymään jossa näytetään käyttäjän lisäämät salasanat
@@ -26,12 +27,11 @@ Sovellus koostuu neljästä eri näkymästä. Sovellus aukeaa kirjautumisnäkym�
 
 ## Jatkokehitysideoita
 
-- Taulu salasanoille tietokantaan
+- :heavy_check_mark: Taulu salasanoille tietokantaan
 - Käyttäjä voi lisätä sovellukseen uusia salasanoja
-- Käyttäjä näkee etusivulla sovellukseen lisäämänsä salasanat
+- :heavy_check_mark: Käyttäjä näkee etusivulla sovellukseen lisäämänsä salasanat
 - Käyttäjä voi kirjautua ulos sovelluksesta logout napilla
 - Käyttäjä pääsee uuden salasanan lisäyssivulle
-- Käyttäjän lisäämien salasanojen näyttäminen
 - Salasanojen lisäys sovelluksen kautta
 - Virheiden ilmoitus käyttäjälle sovelluksen kautta
 - Salasanojen poisto sovelluksesta
