@@ -31,7 +31,7 @@ Huomaa, että (väliaikaiseksi) sovellusta avattaessa tietokanta tyhjennetään 
 #### Testikattavuusraportti
 `poetry run invoke coverage-report`
 
-Komento muodostaa kansion "htmlcov", jonka sisältä löytyy tiedosto "index.html". Avaamalla tiedoston selaimella näät ohjelman kattavuusraportin.
+Komento muodostaa kansion "htmlcov", jonka sisältä löytyy tiedosto "index.html". Avaamalla tiedoston selaimella näet ohjelman kattavuusraportin.
 
 #### Lint
 `poetry run invoke lint`
