@@ -6,7 +6,7 @@ from initialize_db import initialize_db
 def main():
     window = Tk()
     window.title("Zero salt rounds")
-    window.geometry("600x400")
+    window.geometry("1200x800")
 
     # remove when register is working
     initialize_db()
