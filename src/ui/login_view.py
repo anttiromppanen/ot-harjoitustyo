@@ -5,7 +5,7 @@ from entities.user import User
 from services.user_service import UserService
 
 class LoginView:
-    def __init__(self, root, handle_user_view, handle_register_view):
+    def __init__(self, root, handle_user_view, handle_register_view, handle_login_view):
         self._root = root
         self._frame = None
         self._initialize()
@@ -13,6 +13,7 @@ class LoginView:
         self._user_service = UserService()
         self._handle_user_view = handle_user_view
         self._handle_register_view = handle_register_view
+        self._handle_login_view = handle_login_view
 
     def pack(self):
         self._frame.pack(fill=constants.X)
@@ -26,7 +27,7 @@ class LoginView:
         # if valid username and password, move into user view
         # else reset password field and print error
         if self.user:
-            self._handle_user_view(self.user)
+            self._handle_user_view(self.user, self._handle_login_view)
 
     def _handle_register_button(self):
         self._handle_register_view()

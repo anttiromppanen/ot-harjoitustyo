@@ -23,17 +23,18 @@ class UI:
         self._current_view = LoginView(
             self._root,
             self._handle_user_view,
-            self._handle_register_view
+            self._handle_register_view,
+            self._handle_login_view
         )
 
         self._current_view.pack()
 
-    def _handle_user_view(self, user):
-        self._show_user_view(user)
+    def _handle_user_view(self, user, handle_user_view):
+        self._show_user_view(user, handle_user_view)
 
-    def _show_user_view(self, user):
+    def _show_user_view(self, user, handle_login_view):
         self._hide_current_view()
-        self._current_view = UserView(self._root, user)
+        self._current_view = UserView(self._root, user, handle_login_view)
         self._current_view.pack()
 
     def _handle_register_view(self):
