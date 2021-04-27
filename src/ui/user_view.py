@@ -35,7 +35,6 @@ class UserView:
             self.numOfPasswords = self.numOfPasswords + 1
 
     def _initialize(self):
-
         self._frame = ttk.Frame(master=self._root)
         style = ttk.Style()
 
