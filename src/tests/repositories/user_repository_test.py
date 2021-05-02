@@ -1,12 +1,12 @@
 import unittest
 from entities.user import User
 from repositories.user_repository import UserRepository
-from db_connection import database_connection
+from db_connection import test_database_connection
 
 
 class TestUserRepository(unittest.TestCase):
     def setUp(self):
-        self.user_repository = UserRepository(database_connection())
+        self.user_repository = UserRepository(test_database_connection())
         self.user_repository.delete_all()
 
         self.test_user_one = User('test_user_one', 'testpw')

@@ -1,4 +1,4 @@
-from db_connection import database_connection
+from db_connection import database_connection, test_database_connection
 
 def drop_tables(conn):
     cursor = conn.cursor()
@@ -45,11 +45,15 @@ def insert_passwords_for_root(conn):
 
 def initialize_db():
     conn = database_connection()
+    test_conn = test_database_connection()
 
     drop_tables(conn)
     create_tables(conn)
     insert_root(conn)
     insert_passwords_for_root(conn)
+
+    drop_tables(test_conn)
+    create_tables(test_conn)
 
 if __name__ == "__main__":
     initialize_db()

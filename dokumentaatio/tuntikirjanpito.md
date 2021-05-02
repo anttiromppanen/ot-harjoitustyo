@@ -19,4 +19,5 @@
 | 27.4  | 2    | lisätty tietokantaan taulukko passwords sekä linkitetty taulukko user viewiin |
 | 27.4  | 1    | logout nappi toimii
 | 27.4  | 1    | dokumentaation päivitystä
-| <strong>SUMMA</strong> | <strong>45</strong>
+| 3.5   | 3    | lisää testejä & erillinen tietokanta testejä varten
+| <strong>SUMMA</strong> | <strong>48</strong>
