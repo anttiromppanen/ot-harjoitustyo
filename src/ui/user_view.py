@@ -3,12 +3,13 @@ from tkinter import ttk, constants
 from services.password_service import PasswordService
 
 class UserView:
-    def __init__(self, root, user, handle_login_view):
+    def __init__(self, root, user, handle_login_view, handle_add_password_view):
         self._root = root
         self._frame = None
         self.user = user
         self._password_service = PasswordService()
         self._handle_login_view = handle_login_view
+        self._handle_add_password_view = handle_add_password_view
         self._initialize()
 
     def pack(self):
@@ -19,6 +20,9 @@ class UserView:
 
     def handle_logout(self):
         self._handle_login_view()
+
+    def handle_move_to_add_view(self, user):
+        self._handle_add_password_view(user)
 
     def insert_to_tree(self):
         passwords = self._password_service.get_passwords_by_user(self.user)
@@ -46,7 +50,8 @@ class UserView:
 
         add_password_button = ttk.Button(
             master=self._frame,
-            text="Add password"
+            text="Add password",
+            command=lambda: self._handle_add_password_view(self.user)
         )
         logout_button = ttk.Button(
             master=self._frame,

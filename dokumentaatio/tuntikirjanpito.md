@@ -20,4 +20,5 @@
 | 27.4  | 1    | logout nappi toimii
 | 27.4  | 1    | dokumentaation päivitystä
 | 3.5   | 3    | lisää testejä & erillinen tietokanta testejä varten
-| <strong>SUMMA</strong> | <strong>48</strong>
+| 3.5   | 2    | add password view toimii sekä sovelluksen kautta salasanan lisäys toimii
+| <strong>SUMMA</strong> | <strong>50</strong>

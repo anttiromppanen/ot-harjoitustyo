@@ -27,7 +27,7 @@ class LoginView:
         # if valid username and password, move into user view
         # else reset password field and print error
         if self.user:
-            self._handle_user_view(self.user, self._handle_login_view)
+            self._handle_user_view(self.user)
 
     def _handle_register_button(self):
         self._handle_register_view()

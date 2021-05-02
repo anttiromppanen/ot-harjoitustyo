@@ -11,3 +11,8 @@ class PasswordService:
         passwords = self._password_repository.get_all_passwords_by_user(user)
 
         return passwords
+
+    def add_new_password(self, password):
+        added_password = self._password_repository.create_password(password)
+
+        return added_password
