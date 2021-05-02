@@ -19,7 +19,12 @@ class UserView:
         self._frame.destroy()
 
     def handle_logout(self):
-        self._handle_login_view()
+        message_box = tk.messagebox.askquestion('Info', f'Log out user {self.user.username}?')
+
+        if message_box == 'yes':
+            self._handle_login_view()
+        else:
+            return
 
     def handle_move_to_add_view(self, user):
         self._handle_add_password_view(user)

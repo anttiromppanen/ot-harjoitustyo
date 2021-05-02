@@ -1,4 +1,4 @@
-from tkinter import Tk, ttk, constants
+from tkinter import Tk, ttk, constants, messagebox
 from services.password_service import PasswordService
 from entities.password import Password
 
@@ -21,9 +21,14 @@ class AddPasswordView:
         self._handle_user_view(self.user)
 
     def handle_add_new_password(self, site, username, password):
+        if not site or not username or not password:
+            return messagebox.showerror('Error', 'No empty fields allowed')
+
         user_id = self.user.user_id
         new_password = Password(username, password, site, user_id)
         result = self._password_service.add_new_password(new_password)
+
+        messagebox.showinfo('Info', 'Password added')
 
         # Reset fields
         self.site_entry.delete(0, "end")

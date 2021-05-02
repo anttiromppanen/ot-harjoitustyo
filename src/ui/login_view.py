@@ -1,4 +1,4 @@
-from tkinter import Tk, ttk, constants
+from tkinter import Tk, ttk, constants, messagebox
 from db_connection import database_connection
 from ui.user_view import UserView
 from entities.user import User
@@ -24,10 +24,16 @@ class LoginView:
     def _handle_login(self, username, password):
         self.user = self._user_service.login_user(User(username, password))
 
-        # if valid username and password, move into user view
-        # else reset password field and print error
-        if self.user:
-            self._handle_user_view(self.user)
+        # if not valid credentials, reset password entry and show error
+        # else log user in
+        if not username or not password:
+            return messagebox.showerror('Error', 'No empty fields allowed')
+
+        if not self.user:
+            self.password_entry.delete(0, 'end')
+            return messagebox.showerror('Error', 'Invalid username or password')
+
+        self._handle_user_view(self.user)
 
     def _handle_register_button(self):
         self._handle_register_view()
@@ -41,20 +47,20 @@ class LoginView:
         username_label = ttk.Label(
             master=self._frame, text="username", font=(None, 10)
         )
-        username_entry = ttk.Entry(
+        self.username_entry = ttk.Entry(
             master=self._frame
         )
         password_label = ttk.Label(
             master=self._frame, text="password", font=(None, 10)
         )
-        password_entry = ttk.Entry(
+        self.password_entry = ttk.Entry(
             master=self._frame, show="*"
         )
         login_button = ttk.Button(
             master=self._frame,
             text="Login",
             command=lambda: self._handle_login(
-                username_entry.get(), password_entry.get()
+                self.username_entry.get(), self.password_entry.get()
             )
         )
         register_button = ttk.Button(
@@ -66,10 +72,10 @@ class LoginView:
         heading_label.grid(row=0, column=0, columnspan=2,
             sticky=constants.W, padx=5, pady=5)
         username_label.grid(row=1, column=0)
-        username_entry.grid(row=1, column=1, sticky=(
+        self.username_entry.grid(row=1, column=1, sticky=(
             constants.E, constants.W), padx=2, pady=2, ipady=5)
         password_label.grid(row=2, column=0)
-        password_entry.grid(row=2, column=1, sticky=(
+        self.password_entry.grid(row=2, column=1, sticky=(
             constants.E, constants.W), padx=2, pady=2, ipady=5)
         login_button.grid(row=3, column=0, sticky=constants.E,
             padx=2, pady=5, ipady=5)

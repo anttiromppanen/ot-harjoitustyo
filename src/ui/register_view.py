@@ -1,4 +1,4 @@
-from tkinter import Tk, ttk, constants
+from tkinter import Tk, ttk, constants, messagebox
 from db_connection import database_connection
 from services.user_service import UserService
 from entities.user import User
@@ -22,8 +22,11 @@ class RegisterView:
         # if user is created, move to login view
         user = self._user_service.create_user(User(username, password))
 
+        if not username or not password:
+            return messagebox.showerror('Error', 'No empty fields allowed')
+
         if not user:
-            return
+            return messagebox.showerror('Error', 'User already exists')
 
         self._handle_login_view()
         return user
