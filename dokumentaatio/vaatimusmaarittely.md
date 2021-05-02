@@ -28,12 +28,12 @@ Sovellus koostuu neljästä eri näkymästä. Sovellus aukeaa kirjautumisnäkym�
 ## Jatkokehitysideoita
 
 - :heavy_check_mark: Taulu salasanoille tietokantaan
-- Käyttäjä voi lisätä sovellukseen uusia salasanoja
+- :heavy_check_mark: Käyttäjä voi lisätä sovellukseen uusia salasanoja
 - :heavy_check_mark: Käyttäjä näkee etusivulla sovellukseen lisäämänsä salasanat
 - :heavy_check_mark: Käyttäjä voi kirjautua ulos sovelluksesta logout napilla
-- Käyttäjä pääsee uuden salasanan lisäyssivulle
-- Salasanojen lisäys sovelluksen kautta
-- Virheiden ilmoitus käyttäjälle sovelluksen kautta
+- :heavy_check_mark: Käyttäjä pääsee uuden salasanan lisäyssivulle
+- :heavy_check_mark: Salasanojen lisäys sovelluksen kautta
+- :heavy_check_mark: Virheiden ilmoitus käyttäjälle sovelluksen kautta
 - Salasanojen poisto sovelluksesta
 - Käyttäjätunnusten hashaus
 - Lisättyjen salasanojen listaus eri kriteerien mukaan
