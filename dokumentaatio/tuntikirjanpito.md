@@ -21,5 +21,6 @@
 | 27.4  | 1    | dokumentaation päivitystä
 | 3.5   | 3    | lisää testejä & erillinen tietokanta testejä varten
 | 3.5   | 2    | add password view toimii sekä sovelluksen kautta salasanan lisäys toimii
+| 3.5   | 1    | lisätty error ja info dialogit käyttöliittymään
 | 4.5   | 2    | lisää testejä sekä dokumentointia
-| <strong>SUMMA</strong> | <strong>52</strong>
+| <strong>SUMMA</strong> | <strong>53</strong>
