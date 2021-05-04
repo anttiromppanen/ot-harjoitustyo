@@ -22,12 +22,6 @@ Ohje olettaa, että käyttäjällä on poetry valmiiksi asennettuna.
 #### Ohjelman ajaminen
 `poetry run invoke start` tai `poetry run invoke start-windows`
 
-`käyttäjänimi: root`
-
-`salasana: root`
-
-Huomaa, että (väliaikaiseksi) sovellusta avattaessa tietokanta tyhjennetään sekä alustetaan kyseisellä käyttäjällä.
-
 #### Testien ajaminen
 `poetry run invoke test`
 
