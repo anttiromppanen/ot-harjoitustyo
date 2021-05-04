@@ -47,6 +47,9 @@ class UserRepository:
 
     def get_single_user(self, user):
         cursor = self._conn.cursor()
+
+        if not user.username or not user.password: return None
+
         username = user.username.lower()
 
         cursor.execute('SELECT * FROM users WHERE username = (?)', (username,))
