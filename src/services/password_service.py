@@ -19,7 +19,7 @@ class PasswordService:
         Args:
             user: User-olio, jonka lisäämät salasanat halutaan hakea
         Returns:
-            Halutun käyttäjän lisäämät salasanat lista muodossa
+            Halutun käyttäjän lisäämät salasanat listamuodossa
         """
         passwords = self._password_repository.get_all_passwords_by_user(user)
 

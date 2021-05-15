@@ -23,4 +23,5 @@
 | 3.5   | 2    | add password view toimii sekä sovelluksen kautta salasanan lisäys toimii
 | 3.5   | 1    | lisätty error ja info dialogit käyttöliittymään
 | 4.5   | 2    | lisää testejä sekä dokumentointia
-| <strong>SUMMA</strong> | <strong>53</strong>
+| 14.5  | 3    | lisää testejä sekä koodin kommentointia
+| <strong>SUMMA</strong> | <strong>56</strong>
