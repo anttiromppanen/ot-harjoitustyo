@@ -20,6 +20,12 @@ class RegisterView:
     def _handle_register(self, username, password):
         # if user already exists, return and stay on register view
         # if user is created, move to login view
+        if len(username) > 30:
+            return messagebox.showerror('Error', 'Username must be under 30 characters long')
+
+        if len(password) > 50:
+            return messagebox.showerror('Error', 'Password must be under 50 characters long')
+
         user = self._user_service.create_user(User(username, password))
 
         if not username or not password:
@@ -27,6 +33,7 @@ class RegisterView:
 
         if not user:
             return messagebox.showerror('Error', 'User already exists')
+
 
         self._handle_login_view()
         return user

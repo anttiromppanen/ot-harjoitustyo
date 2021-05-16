@@ -54,6 +54,10 @@ class UserService:
             return None
         if not user.username or not user.password:
             return None
+        if len(user.username) > 30:
+            return None
+        if len(user.password) > 50:
+            return None
 
         new_user = self._user_repository.create_user(user)
 

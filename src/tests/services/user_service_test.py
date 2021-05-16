@@ -22,6 +22,22 @@ class TestUserService(unittest.TestCase):
         self.assertEqual(result.username, self.test_user_one.username)
         self.assertEqual(len(users), 1)
 
+    def test_create_user_fails_if_too_long_username(self):
+        test_user = User('a' * 31, 'test_pw')
+        result = self.user_service.create_user(test_user)
+        users = self.user_repository.get_all_users()
+
+        self.assertEqual(result, None)
+        self.assertEqual(len(users), 0)
+
+    def test_create_user_fails_if_too_long_password(self):
+        test_user = User('aasi_boy', 'a' * 51)
+        result = self.user_service.create_user(test_user)
+        users = self.user_repository.get_all_users()
+
+        self.assertEqual(result, None)
+        self.assertEqual(len(users), 0)
+
     def test_create_user_returns_none_if_user_exists(self):
         user = self.user_service.create_user(self.test_user_one)
         result = self.user_service.create_user(self.test_user_one)
