@@ -16,7 +16,7 @@ Luokille injektoidaan testeissä päätietokannan sijaan testitietokanta, joka l
 
 ## Testauskattavuus
 
-Käyttöliittymä poisluettuna sovelluksen testauksen haarautumakattavuus on 89%
+Käyttöliittymä poisluettuna sovelluksen testauksen haarautumakattavuus on 90%
 
 ![Coverage report](https://github.com/anttiromppanen/ot-harjoitustyo/blob/main/dokumentaatio/kuvat/coverage.png)
 
