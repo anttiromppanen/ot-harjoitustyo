@@ -10,7 +10,7 @@ Sovellus on testattu Python-versioilla 3.8.2 sekä 3.6.9. Sovelluksen tulisi toi
 [arkkitehtuuri](https://github.com/anttiromppanen/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
 
 ### Release
-[Viikko5](https://github.com/anttiromppanen/ot-harjoitustyo/releases/tag/viikko5)
+[Final](https://github.com/anttiromppanen/ot-harjoitustyo/releases/tag/final)
 
 ### Asennus
 ---
