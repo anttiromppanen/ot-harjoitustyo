@@ -10,7 +10,7 @@ Sovellus koostuu nelj채st채 eri n채kym채st채. Sovellus aukeaa kirjautumisn채kym�
 
 ![Kayttoliittymaluonnos](./kuvat/kayttoliittymaluonnos.png "Kayttoliittymaluonnos")
 
-## Lopullisen tarjoama toiminnallisuus
+## Lopullisen version tarjoama toiminnallisuus
 
 #### Ennen kirjautumista
 - :heavy_check_mark: K채ytt채j채 voi kirjautua sovellukseen
