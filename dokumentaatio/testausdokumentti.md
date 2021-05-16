@@ -25,3 +25,8 @@ Testaamatta jäi tietokannan alustuksesta vastaava luokka <code>initialize_db.py
 ## Järjestelmätestaus
 
 Sovelluksen järjestelmätestaus on suoritettu käsin.
+
+## Sovellukseen jääneet laatuongelmat
+
+- Salasanojen lisäyksessä ei ole asetettu ylärajaa inputeille
+- Uuden käyttäjän luomisen onnistumisesta ei ilmoiteta käyttäjälle
