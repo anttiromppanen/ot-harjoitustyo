@@ -4,6 +4,14 @@ from services.password_service import PasswordService
 
 class UserView:
     def __init__(self, root, user, handle_login_view, handle_add_password_view):
+        """Käyttäjänäkymästä vastaava käyttöliittymäluokka
+
+        Args:
+            root: Juurielementti, joka hallitsee nykyistä näkymää
+            user: User-luokan olio
+            handle_login_view: UI-luokan metodi, joka siirtää näkymän LoginViewiin
+            handle_add_password_view: UI-luokan metodi, joka siirtää näkymän AddPasswordViewiin
+        """
         self._root = root
         self._frame = None
         self.user = user
@@ -13,12 +21,15 @@ class UserView:
         self._initialize()
 
     def pack(self):
+        """Pakkaa käyttöliittymän komponentit ennen renderöintiä"""
         self._frame.pack(fill=constants.X)
 
     def destroy(self):
+        """Tuhoaa tämänhetkisen näkymän"""
         self._frame.destroy()
 
     def handle_logout(self):
+        """Kirjaa käyttäjän ulos järjestelmästä"""
         message_box = tk.messagebox.askquestion('Info', f'Log out user {self.user.username}?')
 
         if message_box == 'yes':
@@ -27,9 +38,11 @@ class UserView:
             return
 
     def handle_move_to_add_view(self, user):
+        """Siirtää näkymän AddPasswordViewiin kun nappia painetaan"""
         self._handle_add_password_view(user)
 
     def insert_to_tree(self):
+        """Luo näkymän käyttäjien lisäämille salasanoille"""
         passwords = self._password_service.get_passwords_by_user(self.user)
 
         self.numOfPasswords = 1
@@ -48,6 +61,7 @@ class UserView:
             self.numOfPasswords = self.numOfPasswords + 1
 
     def _initialize(self):
+        """Initialisoi näkymän"""
         self._frame = ttk.Frame(master=self._root)
         style = ttk.Style()
 

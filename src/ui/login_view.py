@@ -6,6 +6,14 @@ from services.user_service import UserService
 
 class LoginView:
     def __init__(self, root, handle_user_view, handle_register_view, handle_login_view):
+        """Kirjautumisnäkymästä vastaava käyttöliittymäluokka
+        
+        Args:
+            root: Juurielementti, joka hallitsee nykyistä näkymää
+            handle_user_view: UI-luokan metodi, joka siirtää näkymän UserViewiin
+            handle_register_view: UI-luokan metodi, joka siirtää näkymän RegisterViewiin
+            handle_login_view: UI-luokan metodi, joka siirtää näkymän LoginViewiin
+        """
         self._root = root
         self._frame = None
         self._initialize()
@@ -16,12 +24,20 @@ class LoginView:
         self._handle_login_view = handle_login_view
 
     def pack(self):
+        """Pakkaa käyttöliittymän komponentit ennen renderöintiä"""
         self._frame.pack(fill=constants.X)
 
     def destroy(self):
+        """Tuhoaa tämänhetkisen näkymän"""
         self._frame.destroy()
 
     def _handle_login(self, username, password):
+        """Kirjaa käyttäjän järjestelmään, heittää virheen virheellisillä syötteillä
+        
+        Args:
+            username: String
+            password: String 
+        """
         self.user = self._user_service.login_user(User(username, password))
 
         # if not valid credentials, reset password entry and show error
@@ -36,9 +52,11 @@ class LoginView:
         self._handle_user_view(self.user)
 
     def _handle_register_button(self):
+        """Siirtää näkymän RegisterViewiin kun nappia painetaan"""
         self._handle_register_view()
 
     def _initialize(self):
+        """Initialisoi näkymän"""
         self._frame = ttk.Frame(master=self._root)
 
         heading_label = ttk.Label(

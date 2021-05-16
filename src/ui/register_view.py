@@ -5,6 +5,12 @@ from entities.user import User
 
 class RegisterView:
     def __init__(self, root, handle_login_view):
+        """Rekisteröitymisnäkymästä vastaava käyttöliittymäluokka
+
+        Args:
+            root: Juurielementti, joka hallitsee nykyistä näkymää
+            handle_login_view: UI-luokan metodi, joka siirtää näkymän LoginViewiin
+        """
         self._root = root
         self._frame = None
         self._initialize()
@@ -12,14 +18,22 @@ class RegisterView:
         self._user_service = UserService()
 
     def pack(self):
+        """Pakkaa käyttöliittymän komponentit ennen renderöintiä"""
         self._frame.pack(fill=constants.X)
 
     def destroy(self):
+        """Tuhoaa tämänhetkisen näkymän"""
         self._frame.destroy()
 
     def _handle_register(self, username, password):
-        # if user already exists, return and stay on register view
-        # if user is created, move to login view
+        """Huolehtii uuden käyttäjän rekisteröinnistä, heittää virheen virheellisellä syötteellä
+
+        Args:
+            username: String
+            password: String
+        Returns:
+            Palauttaa luodun User-olion
+        """
         if len(username) > 30:
             return messagebox.showerror('Error', 'Username must be under 30 characters long')
 
@@ -39,9 +53,11 @@ class RegisterView:
         return user
 
     def _handle_cancel(self):
+        """Siirtää näkymän LoginViewiin kun nappia painetaan"""
         self._handle_login_view()
 
     def _initialize(self):
+        """Initialisoi näkymän"""
         self._frame = ttk.Frame(master=self._root)
 
         heading_label = ttk.Label(

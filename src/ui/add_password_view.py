@@ -9,7 +9,7 @@ class AddPasswordView:
         
         Args:
             root: Juurielementti, joka hallitsee nykyistä näkymää
-            handle_user_view: UserView-luokan metodi, joka siirtää näkymän UserViewiin
+            handle_user_view: UI-luokan metodi, joka siirtää näkymän UserViewiin
             user: Kirjautunut käyttäjä, oletusarvoltaan None
         """
         self._root = root
