@@ -8,7 +8,8 @@ Sovellus on testattu Python-versioilla 3.8.2 sekä 3.6.9. Sovelluksen tulisi toi
 [vaatimusmäärittely](https://github.com/anttiromppanen/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)<br />
 [tuntikirjanpito](https://github.com/anttiromppanen/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)<br />
 [arkkitehtuuri](https://github.com/anttiromppanen/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)<br />
-[käyttöohje](https://github.com/anttiromppanen/ot-harjoitustyo/blob/main/dokumentaatio/kayttoohje.md)
+[käyttöohje](https://github.com/anttiromppanen/ot-harjoitustyo/blob/main/dokumentaatio/kayttoohje.md)<br />
+[testausdokumentti](https://github.com/anttiromppanen/ot-harjoitustyo/blob/main/dokumentaatio/testausdokumentti.md)
 
 ### Release
 [Final](https://github.com/anttiromppanen/ot-harjoitustyo/releases/tag/final)
