@@ -1,9 +1,17 @@
-from tkinter import Tk, ttk, constants, messagebox
+from tkinter import ttk, constants, messagebox
 from services.password_service import PasswordService
 from entities.password import Password
 
 class AddPasswordView:
+    """Salasanojen lisäyksestä vastaava käyttöliittymäluokka"""
     def __init__(self, root, handle_user_view, user=None):
+        """Konstruktori, luo uuden salasanojen lisäyksestä vastaavan näkymän
+        
+        Args:
+            root: Juurielementti, joka hallitsee nykyistä näkymää
+            handle_user_view: UserView-luokan metodi, joka siirtää näkymän UserViewiin
+            user: Kirjautunut käyttäjä, oletusarvoltaan None
+        """
         self._root = root
         self._frame = None
         self.user = user
@@ -12,15 +20,25 @@ class AddPasswordView:
         self._initialize()
 
     def pack(self):
+        """Pakkaa käyttöliittymän komponentit ennen renderöintiä"""
         self._frame.pack(fill=constants.X)
 
     def destroy(self):
+        """Tuhoaa tämänhetkisen näkymän"""
         self._frame.destroy()
 
     def handle_back_to_user_view(self):
+        """Palauttaa näkymän UserViewiin """
         self._handle_user_view(self.user)
 
     def handle_add_new_password(self, site, username, password):
+        """Lisää uuden salasanan järjestelmään
+
+        Args:
+            site: String, sivusto johon salasana sekä käyttäjänimi liittyvät
+            username: String, käyttäjänimi sivustolle
+            password: String, salasana sivustolle
+        """
         if not site or not username or not password:
             return messagebox.showerror('Error', 'No empty fields allowed')
 
@@ -30,7 +48,6 @@ class AddPasswordView:
 
         messagebox.showinfo('Info', 'Password added')
 
-        # Reset fields
         self.site_entry.delete(0, "end")
         self.username_entry.delete(0, "end")
         self.password_entry.delete(0, "end")
@@ -38,6 +55,7 @@ class AddPasswordView:
         return result
 
     def _initialize(self):
+        """Initialisoi näkymän"""
         self._frame = ttk.Frame(master=self._root)
 
         heading_label = ttk.Label(
@@ -125,3 +143,5 @@ class AddPasswordView:
             pady=5,
             ipady=5
         )
+
+        self._frame.grid_columnconfigure(1, weight=1, minsize=400)

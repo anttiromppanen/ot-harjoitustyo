@@ -24,4 +24,5 @@
 | 3.5   | 1    | lisätty error ja info dialogit käyttöliittymään
 | 4.5   | 2    | lisää testejä sekä dokumentointia
 | 14.5  | 3    | lisää testejä sekä koodin kommentointia
-| <strong>SUMMA</strong> | <strong>56</strong>
+| 16.5  | 2    | lint-virheiden korjaus sekä docsctring lisäykset
+| <strong>SUMMA</strong> | <strong>58</strong>
